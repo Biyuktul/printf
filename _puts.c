@@ -14,7 +14,7 @@ int _puts(char *str, int i, int *c)
 
 	count = 0;
 	if (!str)
-		return (_puts("",i,c));
+		return (_puts("(null)",i,c));
 	while (str[count])
 	{
 		write(1, &str[count], 1);
