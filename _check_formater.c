@@ -9,7 +9,7 @@
  * Return: whatever _putchar or _puts Returning.
  */
 
-int check_formater(char str, va_list *arg, int i, int *done)
+int	check_formater(char str, va_list *arg, int i, int *done)
 {
 	if (str == 'c')
 		return (_putchar(va_arg(*arg, int), i, done));
@@ -20,6 +20,6 @@ int check_formater(char str, va_list *arg, int i, int *done)
 	else if (str == 'd')
 		return (_putnumber(va_arg(*arg, int), i, c));
 	else
-		return (_putchar(str, i, done));
+                return (_putchar(str, i, done));
 
 }
