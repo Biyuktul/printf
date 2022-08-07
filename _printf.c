@@ -30,8 +30,7 @@ int _printf(const char *format, ...)
 		else
 			i = _putchar(format[i], i, &c);
 	}
-	if (format[i] == '\0')
-		return (0);
+
 	va_end(arg);
 
 	return (c);
