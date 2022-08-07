@@ -14,8 +14,6 @@ int	_puts(char *str, int i, int *c)
 	int	count;
 
 	count = 0;
-	if (!str)
-		return (_puts("(null)", i, c));
 
 	while (str[count])
 	{
