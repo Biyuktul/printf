@@ -13,7 +13,7 @@ int _puts(char *str, int i, int *c)
 	int count;
 
 	count = 0;
-	if (*str == "")
+	if (!str)
 		return (NULL);
 	while (str[count])
 	{
