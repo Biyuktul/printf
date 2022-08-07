@@ -6,7 +6,7 @@
  * Return: number of characters printed.
  */
 
-int	_printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	va_list	arg;
 	int i;
@@ -30,7 +30,9 @@ int	_printf(const char *format, ...)
 		else
 			i = _putchar(format[i], i, &c);
 	}
+	if (format[i] == '\0')
+		return (0);
 	va_end(arg);
 
-	return (c - 1);
+	return (c);
 }
