@@ -8,14 +8,18 @@
  * Return:  on success - traversing variable + 1.
  *		on failure - prints null.
  */
-
-int	_puts(char *str, int i, int *c)
+int _puts(char *str, int i, int *c)
 {
-	register int j;
+	int count;
 
-    	for (j = 0; str[j] != '\0'; j++)
-		write(1, &str[j], 1);
+	count = 0;
+	if (*str == "")
+		return (NULL);
+	while (str[count])
+	{
+		write(1, &str[count], 1);
 		*c += 1;
+		count++;
 	}
 
 	return (i + 1);
