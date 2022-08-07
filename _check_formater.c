@@ -15,10 +15,11 @@ int	check_formater(char str, va_list *arg, int i, int *done)
 		return (_putchar(va_arg(*arg, int), i, done));
 	else if (str == 's')
 		return (_puts(va_arg(*arg, char*), i, done));
-	else
-		return (_putchar(str, i, done));
 	else if (str == 'i')
 		return (_putnumber(va_arg(*arg, int), i, c));
 	else if (str == 'd')
 		return (_putnumber(va_arg(*arg, int), i, c));
+	else
+                return (_putchar(str, i, done));
+
 }
