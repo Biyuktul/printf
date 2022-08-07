@@ -11,15 +11,11 @@
 
 int	_puts(char *str, int i, int *c)
 {
-	int	count;
+	register int j;
 
-	count = 0;
-
-	while (str[count])
-	{
-		write(1, &str[count], 1);
+    	for (j = 0; str[j] != '\0'; j++)
+		write(1, &str[j], 1);
 		*c += 1;
-		count++;
 	}
 
 	return (i + 1);
